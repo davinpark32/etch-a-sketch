@@ -7,7 +7,7 @@ document.body.appendChild(gridBtn);
 let container = document.createElement("div");
 container.setAttribute("id", "container");
 document.body.appendChild(container);
-container.style.cssText = "display: flex; flex-wrap: wrap; width: 180px; height: 160px; justify-content: center; align-items: center;";
+container.style.cssText = "display: flex; flex-wrap: wrap; width: 180px; justify-content: center; align-items: center;";
 
 
 // 16 x 16 grid
@@ -36,16 +36,14 @@ function createGrid(size) {
     let container = document.createElement('div');
     container.setAttribute("id", "container");
     document.body.appendChild(container);
-    container.style.cssText = "display: flex; flex-wrap: wrap; width: 180px; height: 160px; justify-content: center; align-items: center;";
-    container.style.width = size * 10;
-    container.style.height = size * 10;
+    container.style.cssText = "display: flex; flex-wrap: wrap; justify-content: center; align-items: center;";
+    container.style.width = size * 10 + 20 + 'px';
 
-    
     for (i = 0; i < size*size; i++) {
         let div = document.createElement("div");
         div.setAttribute("class", "grid");
         div.style.cssText =
-        "border: 1px solid red; margin-left: -1px; margin-top: -1px; width: 10px; height: 10px;";
+        "border: 1px solid black; margin-left: -1px; margin-top: -1px; width: 10px; height: 10px;";
         div.addEventListener('mouseover', () => {
             div.style.backgroundColor = 'black';
         });
