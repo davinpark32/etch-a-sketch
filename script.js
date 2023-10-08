@@ -38,7 +38,7 @@ function createGrid(size) {
         for (let j = 0; j < size; j++) {
             let div = document.createElement('div');
             div.setAttribute('class', 'newGrid');
-            div.style.cssText='border: 1px solid red; flex-shrink: 1; margin-left: -1px; margin-top: -1px; margin-right: -1px; margin-bottom: -1px';
+            div.style.cssText='border: 1px solid black; flex-shrink: 1; margin-left: -1px; margin-top: -1px; margin-right: -1px; margin-bottom: -1px';
             div.style.width = gridSize;
             div.style.height = gridSize;
             div.addEventListener('mouseover', () => {
@@ -57,7 +57,7 @@ for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
         let div = document.createElement('div');
         div.setAttribute('class', 'newGrid');
-        div.style.cssText='border: 1px solid red; flex-shrink: 1; margin-left: -1px; margin-top: -1px; margin-right: -1px; margin-bottom: -1px';
+        div.style.cssText='border: 1px solid black; flex-shrink: 1; margin-left: -1px; margin-top: -1px; margin-right: -1px; margin-bottom: -1px';
         div.style.width = '240px';
         div.style.height = '240px';
         div.addEventListener('mouseover', () => {
