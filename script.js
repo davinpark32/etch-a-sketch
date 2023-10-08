@@ -50,3 +50,20 @@ function createGrid(size) {
         container.appendChild(div);
     }
 }
+
+
+const myContainer = document.createElement('div');
+myContainer.setAttribute('id', 'testContainer');
+myContainer.style.cssText = 'padding: 0px; margin: 0px; display: flex; justify-content: center; height: 960px; width: 960px; flex-wrap: wrap; border: 1px solid black'
+document.body.appendChild(myContainer);
+for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        let div = document.createElement('div');
+        div.setAttribute('class', 'newGrid');
+        div.style.cssText='border: 1px solid red; flex-shrink: 1; margin-left: -1px; margin-top: -1px; margin-right: -1px; margin-bottom: -1px';
+        div.style.width = '320px';
+        div.style.height = '320px';
+
+        myContainer.appendChild(div);
+    }
+}
