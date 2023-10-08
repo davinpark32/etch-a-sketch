@@ -12,11 +12,15 @@ container.style.cssText = "display: flex; flex-wrap: wrap; width: 180px; justify
 
 gridBtn.addEventListener('click', () => {
     let size = prompt('Size');
-    let existingContainer = document.getElementById('testContainer');
-    if (existingContainer) {
-        document.body.removeChild(existingContainer);
+    if (size <= 100) {
+        let existingContainer = document.getElementById('testContainer');
+        if (existingContainer) {
+            document.body.removeChild(existingContainer);
+        }
+        createGrid(size);
+    } else {
+        alert('Size has to be less than 100')
     }
-    createGrid(size);
 });
 
 function createGrid(size) {
