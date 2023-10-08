@@ -9,6 +9,7 @@ container.setAttribute("id", "container");
 document.body.appendChild(container);
 container.style.cssText = "display: flex; flex-wrap: wrap; width: 180px; justify-content: center; align-items: center;";
 
+console.log(randomColor());
 
 gridBtn.addEventListener('click', () => {
     let size = prompt('Size');
@@ -22,6 +23,10 @@ gridBtn.addEventListener('click', () => {
         alert('Size has to be less than 100')
     }
 });
+
+function randomColor() {
+    return '#'+Math.floor(Math.random()*16777215).toString(16);
+}
 
 function createGrid(size) {
     let gridSize = 960 /size + 'px'
@@ -37,7 +42,7 @@ function createGrid(size) {
             div.style.width = gridSize;
             div.style.height = gridSize;
             div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = 'black'});
+            div.style.backgroundColor = randomColor()});
             myContainer.appendChild(div);
         }
     }
